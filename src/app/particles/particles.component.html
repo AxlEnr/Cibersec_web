@@ -1,0 +1,13 @@
+<!-- particles.component.html -->
+<div class="particles-container">
+  <div 
+    *ngFor="let particle of particles"
+    class="particle"
+    [style.width.px]="particle.size"
+    [style.height.px]="particle.size"
+    [style.left.%]="particle.posX"
+    [style.top.%]="particle.posY"
+    [style.animation]="'float ' + particle.duration + 's ' + particle.delay + 's infinite linear'"
+    [style.opacity]="particle.opacity"
+  ></div>
+</div>
