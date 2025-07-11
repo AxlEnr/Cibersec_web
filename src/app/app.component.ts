@@ -3,18 +3,21 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { ParticlesComponent } from './particles/particles.component';
 
-
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-    CommonModule, 
-    RouterOutlet, 
+    CommonModule,
+    RouterOutlet,
     ParticlesComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent{
+  isMenuVisible = false;
 
+  toggleMenu(): void {
+    this.isMenuVisible = !this.isMenuVisible;
+  }
 }
